@@ -23,9 +23,16 @@ def fizzbuzz(num):
     Expected Output:
     fizzbuzz(15) => "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz"
     """
-
-    #enter your code here
-
+    #enter your code here 
+    if (num % 3) == 0 :
+        print("Fizz")
+    elif (num % 5) == 0:
+        print("Buzz")
+    elif (num % 3) and (num % 5) == 0:
+        print("FizzBuzz")
+    else:
+        print("Your num is neither a multiple of 3 or 5")  
+print(fizzbuzz(num=12))
     
 
 def word_lengths(sentence):
@@ -41,6 +48,13 @@ def word_lengths(sentence):
     """
     
     #enter your code here
+    dictionary = {}
+    sentence = sentence.split("")
+    for words in sentence :
+        dictionary[words] == len[words]
+        print(words)
+word_lengths()      
+   
 
 def cube_sum(number):
     """
