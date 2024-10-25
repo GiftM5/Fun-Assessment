@@ -14,7 +14,6 @@ def dog_years(human_years):
     #enter your code here
     dogs_years = 0
     for i in range(1, human_years + 1):
-        print(i)
         if i ==1 or i == 2:
             dogs_years = dogs_years + 10.5
 
@@ -22,9 +21,9 @@ def dog_years(human_years):
             dogs_years = dogs_years + 4
 
 
-    print(dogs_years)
+    return dogs_years
 
-dog_years(15)
+print(dog_years(15))
 
 def fizzbuzz(num):
     """
@@ -46,7 +45,7 @@ def fizzbuzz(num):
             print("Buzz")
         else:
             print(i)  
-# print(fizzbuzz(num=11))
+print(fizzbuzz(num=11))
     
 
 def word_lengths(sentence):
@@ -67,7 +66,7 @@ def word_lengths(sentence):
     word = sentence.split(" ")
     for i in word :
         dictionary[i] = len(i)
-    print(dictionary)
+    return dictionary
 word_lengths("Unit testing is fun")      
    
 
