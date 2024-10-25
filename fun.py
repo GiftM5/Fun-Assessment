@@ -1,4 +1,4 @@
-def dog_years(human_years):
+def dog_years():
     
     """
     Create a program that counts a dog's age in dog's years. The program should only calculate dog years until 20 human years.
@@ -13,17 +13,20 @@ def dog_years(human_years):
 
     #enter your code here
     dogs_years = 0
-    for i in range(1, human_years + 1):
+    human_years = int(input("Input dog's age in human years: "))
+    if human_years >20 :
+        human_years = int(input("Input dog's age in human years: "))
+    for i in range(1, human_years+1):
         if i ==1 or i == 2:
             dogs_years = dogs_years + 10.5
 
-        elif i >=3 :
+        else:
             dogs_years = dogs_years + 4
 
 
-    return dogs_years
+    return int(dogs_years)
 
-print(dog_years(15))
+print("The dog's age in dog's years is ",dog_years())
 
 def fizzbuzz(num):
     """
@@ -36,16 +39,18 @@ def fizzbuzz(num):
     fizzbuzz(15) => "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz"
     """
     #enter your code here
+    new_list = []
     for i in range(num): 
         if (i % 3) and (num % 5) == 0:
-            print("FizzBuzz")
+            new_list.append("FizzBuzz")
         elif (i % 3) == 0:
-            print("Fizz")
+            new_list.append("Fizz")
         elif (i%5) == 0:
-            print("Buzz")
-        else:
-            print(i)  
-print(fizzbuzz(num=11))
+            new_list.append("Buzz")
+       
+        new_string = "".join(new_list)
+    return new_string 
+print(fizzbuzz(num=3))
     
 
 def word_lengths(sentence):
