@@ -25,8 +25,7 @@ def dog_years():
 
 
     return int(dogs_years)
-
-print("The dog's age in dog's years is ",dog_years())
+print(f"The dog's age in dog's years is {dog_years()}")
 
 def fizzbuzz(num):
     """
@@ -50,7 +49,7 @@ def fizzbuzz(num):
        
         new_string = "".join(new_list)
     return new_string 
-print(fizzbuzz(num=3))
+# print(fizzbuzz(num=3))
     
 
 def word_lengths(sentence):
@@ -66,13 +65,18 @@ def word_lengths(sentence):
     """
     
     # enter your code here
+    if type(sentence) != str :
+        raise ValueError("You have entered a number instead of a sentence.")
+    
+    sentence = str(sentence)
+    names = sentence.split()
     
     dictionary = {}
-    word = sentence.split(" ")
-    for i in word :
-        dictionary[i] = len(i)
+    for word in names:
+        dictionary[word]= len(word)
     return dictionary
-word_lengths("Unit testing is fun")      
+   
+print(word_lengths("Aunty Yankho is amazing"))      
    
 
 def cube_sum(number):
@@ -84,5 +88,17 @@ def cube_sum(number):
     cube_sum(123) => 1^3 + 2^3 + 3^3 = 1 + 8 + 27 = 36
     ```
     """
+   #enter your code here
+    if number < 0 :
+            raise ValueError("You entered a negative number") 
+    total = 0
+    for i in str(number):
+        if i.isdigit():
+            total += int(i)**(3)
+        else:
+            return None    
+       
+    return total                 
+   
+print(cube_sum(123))
     
-    #enter your code here
