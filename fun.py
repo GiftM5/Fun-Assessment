@@ -14,18 +14,18 @@ def dog_years():
     #enter your code here
     dogs_years = 0
     human_years = int(input("Input dog's age in human years: "))
-    if human_years >20 :
-        human_years = int(input("Input dog's age in human years: "))
+    while human_years > 20 :
+        human_years = int(input("Input dog's age in human years that is not more than 20 years "))
     for i in range(1, human_years+1):
         if i ==1 or i == 2:
             dogs_years = dogs_years + 10.5
-
         else:
             dogs_years = dogs_years + 4
 
 
-    return int(dogs_years)
-print(f"The dog's age in dog's years is {dog_years()}")
+    print(f"The dog's age in dog's years is {int(dogs_years)}")
+dog_years()
+
 
 def fizzbuzz(num):
     """
@@ -39,17 +39,19 @@ def fizzbuzz(num):
     """
     #enter your code here
     new_list = []
-    for i in range(num): 
-        if (i % 3) and (num % 5) == 0:
+    for i in range(1,num+1): 
+        if (i % 3) == 0 and (i % 5) == 0:
             new_list.append("FizzBuzz")
         elif (i % 3) == 0:
             new_list.append("Fizz")
-        elif (i%5) == 0:
+        elif (i % 5) == 0:
             new_list.append("Buzz")
+        else:
+            new_list.append(str(i))
        
-        new_string = "".join(new_list)
+        new_string = " ".join(new_list)
     return new_string 
-# print(fizzbuzz(num=3))
+print(fizzbuzz(num=15))
     
 
 def word_lengths(sentence):
