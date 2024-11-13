@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
 from fun import *
+from practice import *
 import sys
 from io import StringIO
 
@@ -18,6 +19,15 @@ class TestFun(unittest.TestCase):
         self.assertEqual(fizzbuzz(15), "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz")
         self.assertEqual(fizzbuzz(3), "1 2 Fizz")
         self.assertEqual(fizzbuzz(5), "1 2 Fizz 4 Buzz")
+        
+    # Test add function
+    def test_add(self):
+        self.assertEqual(sum(2,3),5)
+        self.assertEqual(sum(4,5),9)
+        with self.assertRaises(ValueError):
+            sum(2,"a")
+            
+    
 
 
     # Test word_lengths function

@@ -1,6 +1,9 @@
 def sum(a,b):
+    if type(a) == str or type(b) == str:
+        raise ValueError("You have entered a string instead of a number")
     return a + b
-print(sum(2,3))
+    
+print(sum(int(2),int(3)))
 
 def even_or_odd(num):
     if num % 2 == 0:
@@ -14,9 +17,9 @@ def fizzbuzz(num):
     newlist = []
     for i in range(1,num+1):
         if (i % 3) == 0 and (i % 5)== 0:
-            newlist.append("fizzbuzz")
+            newlist.append("FizzBuzz")
         elif (i % 3) == 0:
-            newlist.append("fizz")
+            newlist.append("Fizz")
         elif(i % 5) == 0 :
             newlist.append("Buzz")
         else:
